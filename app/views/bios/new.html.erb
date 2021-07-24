@@ -3,7 +3,7 @@
 			<%= simple_form_for @bio do |f| %>
 				<section>
 					<% if current_user.tutor %>
-						<%= f.input :content, label: "Tell us about your school, what you are strong at and what you need help with" %>
+						<%= f.input :content, label: "Tell us about your wualifications, teaching methodologies etc." %>
 					<% else %>
 						<%= f.input :content, label: "What is your next major exam? What level are you currently at? (P6, Sec 1, etc.)" %>
 					<% end %>
