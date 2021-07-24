@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Question Hero - On Demand Tutoring</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.6/themes/airbnb.min.css" integrity="sha512-s0ZrPrgzmwoIlxJR7XKxtUbqRm103b8HS0wOnWnJSsKO1prue4aGp1XJRGl9OADSKygpFcCQ/xlieqQ773/aAw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js" data-manual></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-markup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-javascript.min.js"></script>
+
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    <%= favicon_link_tag asset_path('favicon.png') %>
+
+    <title><%= meta_title %></title>
+    <meta name="description" content="<%= meta_description %>">
+
+    <!-- Facebook Open Graph data -->
+    <meta property="og:title" content="<%= meta_title %>" />
+    <meta property="og:type" content="questionhero.herokuapp.com" />
+    <meta property="og:url" content="<%= request.original_url %>" />
+    <meta property="og:image" content="<%= meta_image %>" />
+    <meta property="og:description" content="<%= meta_description %>" />
+    <meta property="og:site_name" content="<%= meta_title %>" />
+  </head>
+
+  <body>
+    <%= render "pages/navbar" %>
+    <div class="mb-6"></div>
+    <%= yield %>
+    <%= render 'shared/flashes' %>
+    <script>Prism.highlightAll();</script>
+  </body>
+</html>

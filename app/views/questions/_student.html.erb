@@ -1,0 +1,43 @@
+
+<div class="col-12 pt-5 pl-4">
+  <h2 class="subheading">Get Started</h2>
+  <%= link_to new_question_path do %>
+    <div class="ask-a-question">
+      <div class="card-qn-infos">
+        <h2>Ask a question</h2>
+        <p>Specify the problem &middot; Pick a tutor &middot; Connect and learn</p>
+      </div>
+    </div>
+  <% end %>
+
+  <h2 class="subheading mt-5">Active Questions</h2>
+  <% @questions.each do |question| %>
+    <div class="card-template question mb-2">
+      <div class="info">
+        <h6 class="title mb-2"><%= link_to question.title, question_path(question) %> </h6>
+          <div class="tags">
+            <% question.skills.each do |skill| %>
+              <p class="card-tag"> <%= skill.name %> </p>
+            <% end %>
+          </div>
+          <div class="time-tag">
+            <p><em>Asked: <%= ((Time.now - question.created_at)/3600).round(1)%> hrs ago</em></p>
+          </div>
+      </div>
+        <% if question&.selected_proposal&.order&.status == 'paid' %>
+          <%= link_to "View",question_messages_path(question), class: "btn fat-btn accepted" %>
+          <!-- link to view the question with the selected tutor -->
+        <% elsif question&.selected_proposal&.order&.status == 'pending' %>
+          <%= simple_form_for @order do |f| %>
+            <%= f.input :proposal_id, as: :hidden, input_html: {value: question.selected_proposal.id } %>
+
+            <%= f.submit 'Pay', class: "btn light-btn mb-3" %>
+          <% end %>
+        <% else %>
+          <%= link_to "Pick a Tutor", question_proposals_path(question), class: "btn fat-btn" %>
+          <!-- link to view the proposals and select the tutors-->
+        <% end %>
+    </div>
+  <% end %>
+</div>
+

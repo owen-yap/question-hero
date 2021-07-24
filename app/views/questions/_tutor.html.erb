@@ -1,0 +1,62 @@
+<div class="col-12 pt-5 pl-4">
+  <h2 class="subheading"><strong>Tutor's</strong> Dashboard</h2>
+  <h2 class="subheading">- Answer a question</h2>
+  <%= form_tag questions_path, method: :get, class: "question-form mb-4" do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control w-75 d-inline-block",
+      placeholder: "Filter by language"
+    %>
+    <%= submit_tag "Search", class: "btn light-btn" %>
+  <% end %>
+  <% @all_questions.each do |question| %>
+    <div class="card-template question mb-2">
+      <div class="info">
+        <h6 class="title mb-2"><%= question.title %> </h6>
+          <div class="tags">
+            <% question.skills.each do |skill| %>
+              <p class="card-tag"> <%= skill.name %> </p>
+            <% end %>
+          </div>
+          <div class="time-tag">
+          <p><em>Asked: <%= ((Time.now - question.created_at)/3600).round(1)%> hrs ago</em></p>
+          </div>
+      </div>
+      <%= link_to "View", question_path(question), class: "btn fat-btn" %>
+    </div>
+  <% end %>
+  <%== pagy_bootstrap_nav(@pagy) %>
+  <h2 class="subheading mt-3">Questions Applied</h2>
+  <% if @proposals.empty? %>
+    <div class='card-template card-questions mt-3 mb-3'>
+      <%= image_tag 'missing.svg' %>
+      <p class='muted'>No questions applied. Apply for a question now.</p>
+    </div>
+  <% else %>
+    <% @proposals.each do |proposal| %>
+      <div class="card-template question mb-2">
+        <div class="info">
+          <h6 class="title mb-2"><%= proposal.question.title %> </h6>
+            <div class="tags">
+              <% proposal.question.skills.each do |skill| %>
+                <p class="card-tag"> <%= skill.name %> </p>
+              <% end %>
+            </div>
+            <div class="time-tag">
+              <p><em>Asked: <%= ((Time.now - proposal.question.created_at)/360).round(1)%> hrs ago</em></p>
+            </div>
+        </div>
+        <% if proposal.status == 'pending' %>
+          <%= link_to "Pending", question_path(proposal.question), class: "btn fat-btn pending" %>
+        <% elsif proposal.status == 'selected' %>
+          <%= link_to "Selected", question_messages_path(proposal.question), class: "btn fat-btn accepted" %>
+        <% else %>
+          <%= link_to cancel_path(proposal), class: 'btn fat-btn rejected' do %>
+            <%= image_tag 'trash.svg', width: '20px', height: '20px' %>
+            Rejected
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

@@ -1,0 +1,61 @@
+.main-heading {
+  color: #509696;
+  font-size: 2rem;
+  width: 480px;
+  border-bottom-style: solid;
+  text-align: center;
+  border-bottom-width: medium;
+  margin: 0 auto;
+}
+
+.heading {
+  text-align: center;
+}
+.caption {
+  font-size: 1.6rem;
+  text-align: center;
+  display: inline-block;
+  width: 70%;
+  margin: 0 auto;
+}
+.subheading {
+  font-size: 1.3rem;
+  display: inline-block;
+}
+
+.muted {
+  color: #808080;
+  display: inline-block;
+}
+
+.gray {
+  color: #808080;
+}
+
+.blue {
+  color: #46B3E6;
+  display: inline-block;
+  transition: color ease 0.2s;
+  font-size: 0.8rem;
+  &:hover {
+    color: $darkblue;
+    text-decoration: none;
+  }
+}
+
+.information {
+  font-size: 0.9rem;
+  display: inline-block;
+  width: 20%;
+
+  img {
+    width: 20px;
+  }
+}
+
+.title {
+  font-size: 1.4rem;
+  display: inline-block;
+  width: 80%;
+  margin: 0;
+}

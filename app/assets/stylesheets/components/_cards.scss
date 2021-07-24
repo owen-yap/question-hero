@@ -1,0 +1,300 @@
+.ask-a-question {
+  height: 140px;
+  width: 100%;
+  background: white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  transition: box-shadow ease 0.2s;
+  img {
+    height: 90%;
+    width: 100px;
+    object-fit: cover;
+    padding-right: 10px;
+    padding-top: 10px;
+  }
+  h2 {
+    font-size: 1.8rem;
+    margin: 0;
+  }
+  p {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    opacity: .7;
+    margin-bottom: 0;
+    margin-top: 8px;
+  }
+  h2, p {
+    color: black;
+    text-decoration: none;
+    transition: color ease 0.2s;
+  }
+}
+
+a:hover {
+  text-decoration: none;
+  .ask-a-question {
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+    .card-qn-infos {
+      p, h2 {
+        color: $darkblue;
+      }
+    }
+  }
+}
+
+.card-tutor {
+  background: $darkerblue;
+}
+
+.card-white {
+  width: 100%;
+  min-height: 160px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.4);
+  border-radius: 8px;
+  background-color: white;
+  padding: 16px;
+}
+
+.card-template {
+  width: 100%;
+  min-height: 160px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.4);
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 16px;
+
+  img {
+    align-self: flex-start;
+  }
+  .card-subheading {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    align-self: center;
+  }
+  form {
+    align-self: center;
+  }
+
+  .card-tag {
+    display: inline-block;
+    color: $lightgray;
+    padding-left: 0.1rem;
+    font-style: italic;
+  }
+
+  .info {
+    width: 80%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    h2 {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    h6 {
+      color: black;
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 0.8rem;
+      font-weight: 300;
+      margin: 0;
+    }
+
+    a {
+      color: white;
+      transition: color ease 0.2s;
+      &:hover {
+        color: rgb(194, 194, 194);
+        text-decoration: none;
+        display: inline-block;
+      }
+    }
+
+    .title a {
+      color: black;
+
+      &:hover {
+        color: $lightblue;
+      }
+    }
+  }
+}
+
+.card-tutor p {
+  font-size: 12px;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+
+// account details
+.card-account {
+
+  .detail-header {
+    font-size: 18px;
+    padding: 0 0 10px 10px;
+  }
+  .account-details {
+    justify-content: flex-start;
+    background-color: white;
+    p {
+      margin: 0;
+    }
+  }
+  .bio {
+    p {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      padding: 5px;
+    }
+  }
+}
+.card-questions {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  height: 300px;
+  img {
+    align-self: center;
+    width: 80px;
+  }
+}
+// order card
+
+.card-order {
+  padding: 10px 10px;
+  display: inline-block;
+  box-shadow: 2px 2px 8px rgb(184, 184, 184);
+  transition: box-shadow ease 0.2s;
+  margin: 10px 0;
+  min-width: 400px;
+  min-height: 350px;
+
+  .card-order-user {
+    color: $darkgray;
+    font-weight: bold;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .card-order-infos {
+    display: flex;
+    align-items: center;
+    .card-title {
+      font-size: 2rem;
+    }
+    .card-order-price {
+      display: inline-block;
+      padding-right: 5px;
+      margin-left: auto;
+
+      .price {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+a:hover .card-order {
+  box-shadow: 2px 2px 12px rgb(122, 122, 122);
+}
+
+.question {
+  background-color: white;
+}
+
+.usp-card {
+  background-color: white;
+  color: #000022;
+  padding: 16px;
+  margin: 1rem;
+  box-shadow: 2px 2px 8px rgb(180, 180, 180);
+  border-radius: 3px;
+  img{
+    width: 40px;
+  }
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+}
+
+.inst-card {
+  background-color: white;
+  color: #000022;
+  box-shadow: 2px 2px 8px rgb(180, 180, 180);
+  border-radius: 3px;
+  img{
+    height: 200px;
+  }
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+}
+
+.card-payments{
+  padding: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.4);
+  border-radius: 6px;
+  width: 70%;
+  background-color: white;
+
+  .tutor-1 {
+    display: inline-flex;
+    align-items: center;
+
+    h5 {
+      padding-left: 20px;
+    }
+  }
+
+  .tutor-2 {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
+
+.time-tag {
+    display: inline-block;
+    color: #b5cfd8;
+    padding-top: 2rem;
+  }
+
+.message-card {
+  background-color: white;
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 3px;
+  border: solid, 2px $lightblue;
+}
+.review-profile {
+  width: auto;
+  height: auto;
+  box-shadow: 0 0 8px rgba(0,0,0,0.4);
+  border-radius: 8px;
+  padding: 4px;
+  margin-bottom: 4px;
+}

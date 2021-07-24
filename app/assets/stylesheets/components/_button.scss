@@ -1,0 +1,163 @@
+.dark-btn {
+  color: white;
+  border-radius: 4px;
+  background: $lightblue;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  min-width: 110px;
+  padding: 0.3rem;
+
+  &:hover {
+  background-color: rgb(207, 74, 207);
+  color: white;
+  }
+}
+
+.light-btn {
+  color: white;
+  border-radius: 4px;
+  background: $lighterblue;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  min-width: 110px;
+  padding: 0.3rem;
+
+  &:hover {
+  background-color: cornflowerblue;
+  color: white;
+  }
+}
+
+.delete-btn {
+  color: white;
+  border-radius: 4px;
+  background: $redcolor;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  min-width: 110px;
+  padding: 0.3rem;
+
+  &:hover {
+  background-color: $red;
+  color: white;
+  }
+}
+
+.white-btn {
+  color: black;
+  border-radius: 4px;
+  background: white;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  min-width: 110px;
+  padding: 0.3rem;
+
+  &:hover {
+  background-color: $lightgray;
+  color: black;
+  }
+}
+
+.round-btn {
+  color: black;
+  border-radius: 20px;
+  background: $lightblue;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  min-width: 110px;
+  padding: 0.3rem;
+
+  &:hover {
+  background-color: $lighterblue;
+  color: black;
+  }
+}
+
+.white-btn-sm {
+  color: black;
+  background:white;
+  border-radius: 4px;
+  line-height: 1.2;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: lighter;
+  transition: opacity 0.3s ease;
+  margin: 8px 0px 8px 0px;
+
+  &:hover {
+   background-color: #f8f9fa ;
+   border: 1px solid $lightgray;
+  }
+}
+
+.fat-btn {
+  color: white;
+  border-radius: 4px;
+  background: $lightblue;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  padding: 0.7rem;
+  width: 90px;
+
+  &:hover {
+  background-color: $darkblue;
+  color: white;
+  }
+}
+
+.fat-green-btn {
+  color: white;
+  border-radius: 4px;
+  background: #1B8F28;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  padding: 0.7rem;
+  width: 90px;
+
+  &:hover {
+  background-color: #368F1B;
+  color: white;
+  }
+}
+
+.transparent-btn  {
+  color: $darkgray;
+  border: 1px solid $darkgray;
+  border-radius: 8px;
+  font-weight: lighter;
+  transition: color 0.2s ease, border 0.2s ease;
+  line-height: 2.5;
+
+  &:hover {
+    color: black;
+    border: 1px solid black;
+  }
+}
+
+.pending {
+  background-color: $lightgray !important;
+}
+
+.accepted {
+  background-color: #5BD28C;
+}
+
+.rejected {
+  background-color: #FD5F72;
+}
+
+.pill {
+  color: white;
+  background: #FD5F72;
+  border-radius: 15px;
+  line-height: 1.2;
+  padding: 3px;
+  font-size: 10px;
+  font-weight: lighter;
+  // transition: opacity 0.3s ease;
+  margin: 2px 0px 2px 0px;
+  border-style: solid $lightgray 1px;
+}
+.avg-rate {
+  justify-content: space-between;
+}

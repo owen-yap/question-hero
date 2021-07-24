@@ -1,0 +1,70 @@
+<%= simple_form_for(question, html: { class: "question-form w-100"}) do |f| %>
+    <div class="form-section">
+      <section>
+        <div class="form-heading">
+          <p class="subheading">
+            <%= image_tag 'one.svg', class: "avatar-sm"%>
+            What do you need help with?
+          </p>
+          <%= f.input :title, placeholder: "E.g. - Need help going through this Sec 4 O-level paper" %>
+          <div class="form-inputs">
+            <%= f.rich_text_area :rich_body %>
+          </div>
+        </div>
+      </section>
+      <p class="information m-4">
+        <%= image_tag "information.svg" %>
+        Summarize the problem, describe what you have tried, and show pictures of your question if you are only asking for 1 specific question.
+      </p>
+    </div>
+
+  <div class="form-section">
+    <section>
+      <div class="form-heading">
+        <p class="subheading">
+          <%= image_tag 'two.svg', class: "avatar-sm" %>
+          Subjects
+        </p>
+        <%= f.association :skills, collection: Skill.all,
+          as: :check_boxes,
+          include_blank: false,
+          include_hidden: false,
+          input_html: { class: "skills-selector" },
+          item_wrapper_class: 'skills-item' %>
+      </div>
+    </section>
+    <p class="information m-4">
+      <%= image_tag "information.svg" %>
+      Pick the subjects related to the task
+    </p>
+  </div>
+
+  <div class="form-section">
+    <section>
+      <div class="form-heading">
+        <p class="subheading">
+          <%= image_tag 'three.svg', class: "avatar-sm" %>
+          Availability
+        </p>
+          <h5>Available timeslots for tuition (Give 2)</h5>
+        <span class="d-flex">
+          <div class="row w-100">
+            <div class="col-6">
+              <%= f.input :start_time, label: "Time 1 ", as: :string %>
+            </div>
+            <div class="col-6">
+              <%= f.input :end_time, label: "Time 2 ", as: :string %>
+            </div>
+          </div>
+        </span>
+      </div>
+    </section>
+    <p class="information m-4">
+      <%= image_tag "information.svg" %>
+      A typical session will last anywhere between 15-
+      90 mins
+    </p>
+  </div>
+
+  <%= f.button :submit, "Submit", class: "btn light-btn mb-5 mt-2"%>
+<% end %>

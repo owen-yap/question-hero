@@ -1,0 +1,39 @@
+.question-form {
+  section {
+    box-shadow: 2px 2px 8px rgb(218, 218, 218);
+    background-color: white;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 1400px;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+  img {
+    width: 30px;
+  }
+
+  label {
+    display: block;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+  }
+
+  input, textarea {
+    width: 100%;
+    // background-color: $lighterblue;
+    // border: none;
+    padding: 5px;
+    border-radius: 8px;
+  }
+
+  input[type=submit] {
+    width: 100px;
+  }
+
+  textarea {
+    height: 100px;
+  }
+}
+.question-links {
+  justify-content: space-between;
+}

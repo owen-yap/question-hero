@@ -1,0 +1,100 @@
+
+<div class="container">
+  <h1>UI KIT</h1>
+  <h2>Buttons</h2>
+  <div class="container">
+    <div class="btn dark-btn">Sign Up</div>
+    <div class="btn light-btn">Light</div>
+    <div class="btn white-btn">White</div>
+    <div class="btn round-btn">Round</div>
+    <div class="btn fat-btn">Fat</div>
+    <div class="btn transparent-btn">Transparent</div>
+  </div>
+
+
+  <h2>Cards</h2>
+  <div class="ask-a-question">
+    <div class="card-qn-infos">
+      <h2>Ask a question</h2>
+      <p>Specify a problem &middot; Set a price &middot; Connect and learn</p>
+    </div>
+    <%= image_tag "code.svg" %>
+  </div>
+
+  <!-- tutor card -->
+  <div class="card-template card-tutor mt-3 mb-3">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" alt="logo" class="avatar-lg">
+    <div class="info ml-4">
+      <h2>Elon Musk</h2>
+      <p class="card-subheading">Good with: </p>
+      <ul class="tags">
+        <li class="card-tag">Ruby</li>
+        <li class="card-tag">Javascript</li>
+      </ul>
+      <a href="#">View full profile ></a>
+    </div>
+
+    <div class="info">
+      <p class="card-subheading">Availability:</p>
+      <p class="card-subheading">3pm</p>
+    </div>
+
+    <div class="info">
+      <p class="card-subheading">Price:</p>
+      <p class="card-subheading">$15</p>
+    </div>
+    <a href"#" class="btn white-btn">Select</a>
+  </div>
+
+  <%# account details %>
+  <div class='card-account'>
+      <div class='detail-header'>
+        <strong>Account Details</strong>
+        <a href="#", class='blue'>🖊Edit Account Details</a>
+        <a href="#", class='blue'>🖊Change Password</a>
+      </div>
+      <div class='card-template account-details'>
+        <img class="avatar-lg" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" >
+        <div class='name-email info ml-3'>
+          <p class='muted'>Username</p>
+          <p>enter-name-link</p>
+          <p class='muted mt-4'>Email</p>
+          <p>enter-email-link</p>
+        </div>
+        <div class='password info'>
+          <p class='muted'>Password</p>
+          <p>enter-password</p>
+        </div>
+      </div>
+  </div>
+<%# question card row %>
+  <div class='card-template card-questions mt-3 mb-3'>
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" alt="IMG HERE" width='81' height='81'>
+    <p class='muted'>No questions applied. Apply for a question now.</p>
+  </div>
+
+
+
+  <!-- ordercard -->
+
+  <div class="card-order">
+    <h4>Order Summary</h4>
+    <p>Tutor John</p>
+    <div class="card-order-user">
+      <img class="avatar-large m-3" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" >
+      <p>Elon Musk</p>
+    </div>
+
+    <div class="card-order-infos">
+      <div class="card-description">
+        <p class="card-title">Total:</p>
+
+      </div>
+      <div class="card-order-price">
+        <p class="price">$15</p>
+      </div>
+    </div>
+  </div>
+
+
+</div>

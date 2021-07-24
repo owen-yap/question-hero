@@ -1,0 +1,125 @@
+.split-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+
+  .left-container {
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000022;
+    color: white;
+
+    .logo {
+      width: 400px;
+    }
+
+    .acc-img {
+      width: 85%;
+    }
+
+    p {
+      font-size: 1.3rem;
+      display: inline-block;
+      width: 75%;
+    }
+  }
+
+  .right-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    position: relative;
+    .back-link {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+    }
+    .login-form {
+      width: 60%;
+    }
+  }
+}
+
+.container-sm {
+  width: 90%;
+  max-width: 1000px;
+}
+
+.msg-container {
+  width: 100%;
+  background-color: $lighterblue;
+
+  form {
+    input[type=text] {
+      display: inline-block;
+      margin: 0;
+    }
+    input[type=submit] {
+      display: inline-block;
+    }
+  }
+}
+
+.msg {
+  background-color: #ECE7E1;
+  height: 60vh;
+  overflow-y: scroll;
+}
+
+.container-payments {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  width: 800px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.review-container {
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: rgba(77, 76, 76, 0.4);
+}
+
+.col-5 {
+  border: solid #F4F4F4 ;
+  width: auto;
+  height: auto;
+  border-right: 3px solid rgb(82, 81, 81);
+  .img {
+    text-align: center;
+  }
+  .tutorname {
+    text-align: center;
+  }
+  .subheading {
+    display: block;
+  }
+}
+
+.right-column-top {
+  padding: 0 0 20px 0;
+  border-bottom: 3px solid rgb(82, 81, 81);
+}
+
+.form-section {
+  display: flex;
+}
+
+footer {
+  background-color: $darkerblue;
+
+  .footer-logo {
+    width: 300px;
+  }
+
+  .icon {
+    width: 24px;
+  }
+}
