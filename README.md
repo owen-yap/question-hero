@@ -1,6 +1,6 @@
 # Question Hero
 
-<img src="app/assets/images/question-hero-logo.png" alt="Question Hero Icon" height="350" />
+<img src="app/assets/images/question-hero-logo-readme.png" alt="Question Hero Icon" height="350" />
 
 **Team Members:**
 
@@ -17,7 +17,7 @@ Education - As technology rapidly infiltrates the education sector and changes n
 
 ## Demo
 
-The demo recording can be viewed [here](https://youtu.be/MGSLVzRVLVU).
+The demo recording can be viewed [here](https://youtu.be/pXbj3vu_1Fk).
 
 ## Running the application
 
